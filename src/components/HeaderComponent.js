@@ -33,6 +33,7 @@ class Header extends Component {
             <NavbarToggler onClick={this.toggleNav} />
             <NavbarBrand className="mr-auto" href="/">
               <img
+                className="d-inline"
                 src="assets/images/logo.png"
                 height="30"
                 width="41"

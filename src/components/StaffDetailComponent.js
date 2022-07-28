@@ -6,8 +6,8 @@ import { Link } from "react-router-dom";
 
 function RenderStaff({ staff }) {
   return (
-    <Card className="col-12 col-md-5 m-1">
-      <CardImg width="100%" src={staff.image} alt={staff.name} />
+    <Card className="col-lg-3 col-sm-4 col-12 m-1">
+      <CardImg src={staff.image} alt={staff.name} />
     </Card>
   );
 }
@@ -15,7 +15,7 @@ function RenderStaff({ staff }) {
 function RenderDetail({ staff }) {
   if (staff != null) {
     return (
-      <div className="col-lg-4 col-sm-6 mt-5 border rounded">
+      <div className="col-lg-9 col-sm-8 col-12 m-1">
         <Media>
           <Media body className="ml-5">
             <Media heading>Họ và tên: {staff.name}</Media>
@@ -44,16 +44,10 @@ const StaffDetail = (props) => {
             </BreadcrumbItem>
             <BreadcrumbItem active>{props.staff.name}</BreadcrumbItem>
           </Breadcrumb>
-          <div className="col-12">
-            <h3>{props.staff.name}</h3>
-            <hr />
-          </div>
         </div>
         <div className="row">
-          <div className="col-12 col-md-5 m-1">
-            <RenderStaff staff={props.staff} />
-          </div>
-          <div className="col-12 col-md-5 m-1">
+          <RenderStaff staff={props.staff} />
+          <div className="col-lg-8 col-sm-7 col-12 m-1">
             <RenderDetail staff={props.staff} />
           </div>
         </div>

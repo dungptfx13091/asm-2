@@ -34,10 +34,11 @@ class Main extends Component {
         <Header />
         <Switch>
           <Route
+            exact
             path="/staff"
             component={() => <Staffs staffs={this.state.staffs} />}
           />
-          <Route path="/staff/:staffId" component={StaffWithID} />
+          <Route exact path="/staff/:staffId" component={StaffWithID} />
           <Redirect to="/staff" />
         </Switch>
         <Footer />
